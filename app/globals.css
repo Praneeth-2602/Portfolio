@@ -2,32 +2,214 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
+
+  * {
+    cursor: none;
+  }
+
+  .cursor-dot {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    transition: width 0.2s ease, height 0.2s ease, border-radius 0.2s ease;
+  }
+
+  .cursor-dot-outline {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: width 0.2s ease, height 0.2s ease, border-radius 0.2s ease;
+  }
+
+  .particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    animation: particle-fade 1s forwards;
+  }
+
+  @keyframes particle-fade {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+
+  /* styles/globals.css or your main CSS file */
+  @keyframes text-reveal {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  ::selection {
+    background-color: theme('colors.selection-bg');
+    color: theme('colors.selection-text');
+  }
+
+  /* styles/globals.css or your main CSS file */
+
+  .highlight {
+    background-color: yellow;
+    position: relative;
+  }
+
+  @keyframes particle {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  .particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    animation: particle 1s ease-out forwards;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+
+
+
+/* styles/globals.css or your main CSS file */
+@keyframes blast {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.blast {
+  @apply inline-block relative;
+}
+
+.blast span {
+  display: inline-block;
+  opacity: 0;
+  animation: blast 0.6s ease forwards;
+}
+
+.blast span:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+.blast span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.blast span:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+.blast span:nth-child(4) {
+  animation-delay: 1.4s;
+}
+
+.blast span:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+.blast span:nth-child(6) {
+  animation-delay: 1.6s;
+}
+
+.blast span:nth-child(7) {
+  animation-delay: 1.7s;
+}
+
+.blast span:nth-child(8) {
+  animation-delay: 1.8s;
+}
+
+/* Add more child spans as needed */
+
+.blast-active span {
+  opacity: 0;
+  animation: blast 0.6s ease forwards;
+}
+
+.blast-active span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.blast-active span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.blast-active span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.blast-active span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.blast-active span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.blast-active span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.blast-active span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.blast-active span:nth-child(8) {
+  animation-delay: 0.8s;
 }
