@@ -26,8 +26,8 @@ module.exports = {
       colors: {
         primary: '#1c1c22',
         accent: {
-          DEFAULT: '#00ff99',
-          hover: '#00e187',
+          DEFAULT: '#00bcd4',
+          hover: '#ff5722',
           dark: '#00cc88',
         },
         'selection-bg': '#ffeb3b', // Yellow background
