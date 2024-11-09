@@ -174,8 +174,8 @@ const Cursor = () => {
 
     return (
         <>
-            <div ref={dotOutline} className="cursor-dot-outline absolute pointer-events-none"></div>
-            <div ref={dot} className="cursor-dot absolute pointer-events-none"></div>
+            <div ref={dotOutline} className="rounded-full cursor-dot-outline absolute pointer-events-none"></div>
+            <div ref={dot} className="rounded-full cursor-dot absolute pointer-events-none"></div>
         </>
     );
 };

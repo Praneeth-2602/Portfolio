@@ -11,7 +11,7 @@ const about = {
     info: [
         {
             fieldName: "Name",
-            fieldValue: "John Doe",
+            fieldValue: "Praneeth Palugula",
         },
         {
             fieldName: "Email",
@@ -52,34 +52,14 @@ const experience = {
             period: "Summer 2024",
         },
         {
-            company: "Company Name",
-            position: "Frontend Developer",
-            period: "Summer 2027",
+            company: "CRISPR Club",
+            position: "Core Team Member",
+            period: "2024 - Present",
         },
         {
-            company: "Company Name",
-            position: "Full Stack Developer",
-            period: "Summer 2026",
-        },
-        {
-            company: "Company Name",
-            position: "Backend Developer",
-            period: "Summer 2025",
-        },
-        {
-            company: "Company Name",
-            position: "Frontend Developer",
-            period: "Summer 2027",
-        },
-        {
-            company: "Company Name",
-            position: "Full Stack Developer",
-            period: "Summer 2026",
-        },
-        {
-            company: "Company Name",
-            position: "Backend Developer",
-            period: "Summer 2025",
+            company: "GPT 4.0 Solvathon",
+            position: "Organising Committee",
+            period: "TantraFeista 2024",
         }
     ]
 }
@@ -90,16 +70,7 @@ const education = {
     title: "My Education",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec nunc tincidunt ultricies.",
     items: [
-        {
-            institution: "Online Course Platform",
-            degree: "Full Stack Web Development Bootcamp",
-            period: "2023",
-        },
-        {
-            institution: "Codeacademy",
-            degree: "Frontend Track",
-            period: "2022",
-        },
+
         {
             institution: "IIIT Nagpur",
             degree: "B.Tech in Computer Science",
@@ -114,7 +85,22 @@ const education = {
             institution: "Pallavi Model School",
             degree: "High School",
             period: "2016 - 2020",
-        }
+        },
+        {
+            institution: "Online Course Platform",
+            degree: "Full Stack Web Development Bootcamp",
+            period: "2023",
+        },
+        {
+            institution: "100xDEVs",
+            degree: "Web 3",
+            period: "2024",
+        },
+        {
+            institution: "FreeCodeCamp",
+            degree: "Web 3",
+            period: "2024"
+        },
     ]
 }
 

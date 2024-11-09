@@ -18,8 +18,8 @@ const projects = [
     {
         num: '01',
         category: 'frontend',
-        title: 'project 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+        title: 'INSPIRE',
+        description: `This project aims to create a vibrant online community for students to share resources, collaborate on projects, and support each other's academic and personal growth.`,
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
         image: '/assets/work/thumb1.png',
         live: "",
@@ -28,8 +28,9 @@ const projects = [
     {
         num: '02',
         category: 'fullstack',
-        title: 'project 2',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+        title: 'Weekend Knocks',
+        description: 'A fullstack application designed for weekend event management.',
+        description: 'A fullstack application designed for weekend esports event management.',
         stack: [{ name: "NextJS" }, { name: "Tailwind" }, { name: "NodeJS" }],
         image: '/assets/work/thumb2.png',
         live: "",
@@ -38,14 +39,13 @@ const projects = [
     {
         num: '03',
         category: 'frontend',
-        title: 'project 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.',
+        title: 'AI Resume Builder',
+        description: 'An AI-powered tool to help users create professional resumes.',
         stack: [{ name: "NextJS" }, { name: "Tailwind" }],
         image: '/assets/work/thumb3.png',
         live: "",
         github: ""
     },
-
 ]
 
 function Work() {
