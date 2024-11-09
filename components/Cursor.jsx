@@ -14,8 +14,8 @@ const Cursor = () => {
     const cursorRectangular = useRef(false);
     const cursorScaled = useRef(false);
 
-    const endX = useRef(window.innerWidth / 2);
-    const endY = useRef(window.innerHeight / 2);
+    const endX = useRef(0);
+    const endY = useRef(0);
     const _x = useRef(0);
     const _y = useRef(0);
 
@@ -43,12 +43,12 @@ const Cursor = () => {
 
     const toggleCursorShape = useCallback(() => {
         if (cursorRectangular.current) {
-            dot.current.style.width = '100px'; // Example size, adjust as needed
-            dot.current.style.height = '40px'; // Example size, adjust as needed
-            dot.current.style.borderRadius = '10px'; // Example rounded rectangle, adjust as needed
-            dotOutline.current.style.width = '120px'; // Example size, adjust as needed
-            dotOutline.current.style.height = '60px'; // Example size, adjust as needed
-            dotOutline.current.style.borderRadius = '10px'; // Example rounded rectangle, adjust as needed
+            dot.current.style.width = '100px';
+            dot.current.style.height = '40px';
+            dot.current.style.borderRadius = '10px';
+            dotOutline.current.style.width = '120px';
+            dotOutline.current.style.height = '60px';
+            dotOutline.current.style.borderRadius = '10px';
         } else {
             dot.current.style.width = '30px';
             dot.current.style.height = '30px';
@@ -79,17 +79,7 @@ const Cursor = () => {
         toggleCursorSize();
     }, [toggleCursorSize]);
 
-    const mouseEnterEvent = useCallback(() => {
-        cursorVisible.current = true;
-        toggleCursorVisibility();
-    }, [toggleCursorVisibility]);
-
-    const mouseLeaveEvent = useCallback(() => {
-        cursorVisible.current = false;
-        toggleCursorVisibility();
-    }, [toggleCursorVisibility]);
-
-    const mouseMoveEvent = useCallback(e => {
+    const mouseMoveEvent = useCallback((e) => {
         cursorVisible.current = true;
         toggleCursorVisibility();
 
@@ -131,41 +121,40 @@ const Cursor = () => {
     }, []);
 
     useEffect(() => {
-        document.addEventListener('mousedown', mouseOverEvent);
-        document.addEventListener('mouseup', mouseOutEvent);
-        document.addEventListener('mousemove', mouseMoveEvent);
-        document.addEventListener('mouseenter', mouseEnterEvent);
-        document.addEventListener('mouseleave', mouseLeaveEvent);
+        // Ensure window exists to attach event listeners
+        if (typeof window !== 'undefined') {
+            document.addEventListener('mousedown', mouseOverEvent);
+            document.addEventListener('mouseup', mouseOutEvent);
+            document.addEventListener('mousemove', mouseMoveEvent);
 
-        // Add listeners for buttons and header elements
-        const buttons = document.querySelectorAll('button, .header-element');
-        buttons.forEach(button => {
-            button.addEventListener('mouseenter', buttonHoverEvent);
-            button.addEventListener('mouseleave', buttonLeaveEvent);
-        });
+            const buttons = document.querySelectorAll('button, .header-element');
+            buttons.forEach((button) => {
+                button.addEventListener('mouseenter', buttonHoverEvent);
+                button.addEventListener('mouseleave', buttonLeaveEvent);
+            });
 
-        // Add listeners for h1, h2, h3 elements
-        const headings = document.querySelectorAll('h1, h2, h3');
-        headings.forEach(heading => {
-            heading.addEventListener('mouseenter', headingHoverEvent);
-            heading.addEventListener('mouseleave', headingLeaveEvent);
-        });
+            const headings = document.querySelectorAll('h1, h2, h3');
+            headings.forEach((heading) => {
+                heading.addEventListener('mouseenter', headingHoverEvent);
+                heading.addEventListener('mouseleave', headingLeaveEvent);
+            });
 
-        animateDotOutline();
+            animateDotOutline();
+        }
 
         return () => {
             document.removeEventListener('mousedown', mouseOverEvent);
             document.removeEventListener('mouseup', mouseOutEvent);
             document.removeEventListener('mousemove', mouseMoveEvent);
-            document.removeEventListener('mouseenter', mouseEnterEvent);
-            document.removeEventListener('mouseleave', mouseLeaveEvent);
 
-            buttons.forEach(button => {
+            const buttons = document.querySelectorAll('button, .header-element');
+            buttons.forEach((button) => {
                 button.removeEventListener('mouseenter', buttonHoverEvent);
                 button.removeEventListener('mouseleave', buttonLeaveEvent);
             });
 
-            headings.forEach(heading => {
+            const headings = document.querySelectorAll('h1, h2, h3');
+            headings.forEach((heading) => {
                 heading.removeEventListener('mouseenter', headingHoverEvent);
                 heading.removeEventListener('mouseleave', headingLeaveEvent);
             });
@@ -176,8 +165,6 @@ const Cursor = () => {
         mouseOverEvent,
         mouseOutEvent,
         mouseMoveEvent,
-        mouseEnterEvent,
-        mouseLeaveEvent,
         buttonHoverEvent,
         buttonLeaveEvent,
         headingHoverEvent,
@@ -187,8 +174,8 @@ const Cursor = () => {
 
     return (
         <>
-            <div ref={dotOutline} className="cursor-dot-outline absolute pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-100 transition-opacity duration-300 ease-in-out z-[999]"></div>
-            <div ref={dot} className="cursor-dot absolute pointer-events-none transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-100 transition-opacity duration-300 ease-in-out mix-blend-difference bg-blend-exclusion z-[999]"></div>
+            <div ref={dotOutline} className="cursor-dot-outline absolute pointer-events-none"></div>
+            <div ref={dot} className="cursor-dot absolute pointer-events-none"></div>
         </>
     );
 };

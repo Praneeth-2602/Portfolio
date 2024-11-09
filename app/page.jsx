@@ -9,8 +9,9 @@ import { FiDownload } from "react-icons/fi";
 import { useEffect } from "react";
 
 const Home = () => {
-
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleMouseUp = () => {
       const selectedText = window.getSelection().toString();
       if (selectedText) {
@@ -32,6 +33,8 @@ const Home = () => {
     };
 
     const createParticles = (rect) => {
+      if (typeof window === "undefined") return;
+
       const particlesContainer = document.createElement("div");
       particlesContainer.style.position = "absolute";
       particlesContainer.style.top = `${rect.top + window.scrollY}px`;
