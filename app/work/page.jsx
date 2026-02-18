@@ -39,19 +39,19 @@ const projects = [
         ],
         image: "/assets/work/weekendknocks.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/Weekend_Knocks"
     },
 
     {
         num: "02",
         category: "fullstack",
-        title: "IIIT Nagpur Website",
+        title: "IIIT Nagpur Website – Institutional CMS Platform",
         description:
-            "A structured institutional website built for hackathon deployment with dynamic content rendering and categorized documents.",
+            "A structured institutional website built with dynamic content rendering and categorized documents.",
         problem:
             "Institutional data was scattered and difficult to maintain dynamically.",
         solution:
-            "Implemented modular content rendering with structured JSON-driven CMS sections and categorized notices.",
+            "Implemented modular content rendering with structured JSON-driven CMS sections.",
         impact:
             "Improved accessibility and maintainability of institutional information.",
         role:
@@ -63,7 +63,7 @@ const projects = [
         ],
         image: "/assets/work/iiit.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/iiitn-website"
     },
 
     {
@@ -71,13 +71,13 @@ const projects = [
         category: "frontend",
         title: "AI Resume Builder – Prompt-Guided Resume Generator",
         description:
-            "A guided resume creation tool that transforms structured prompts into polished, recruiter-friendly resumes.",
+            "A guided resume creation tool that transforms structured prompts into polished resumes.",
         problem:
-            "Users struggle to articulate achievements into concise professional content.",
+            "Users struggle to convert achievements into professional content.",
         solution:
-            "Designed AI-assisted editing flow with template switching and instant preview rendering.",
+            "Designed AI-assisted editing flow with template switching and preview rendering.",
         impact:
-            "Reduced drafting time and improved content clarity for first-time applicants.",
+            "Reduced drafting time and improved output clarity.",
         role:
             "Built UI workflow and AI integration pipeline.",
         stack: [
@@ -86,7 +86,7 @@ const projects = [
         ],
         image: "/assets/work/resume.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/Ai-Resume-Builder-App"
     },
 
     // =========================
@@ -95,18 +95,18 @@ const projects = [
 
     {
         num: "04",
-        category: "AI/ML",
-        title: "ResearchAI – Multimodal Agentic Research Assistant",
+        category: "ai",
+        title: "InsightAgent – Multimodal Agentic Research Assistant",
         description:
             "An AI system that ingests PDFs, web articles, charts, and lecture audio to generate structured research briefs.",
         problem:
             "Research synthesis across multiple sources is time-intensive and fragmented.",
         solution:
-            "Built a RAG pipeline using semantic chunk retrieval and multimodal LLM orchestration.",
+            "Built a RAG pipeline using semantic retrieval and multimodal orchestration.",
         impact:
-            "Automated cross-source knowledge synthesis for structured output generation.",
+            "Automated structured knowledge synthesis.",
         role:
-            "Architected ingestion pipeline, vector search, and AI orchestration.",
+            "Architected ingestion pipeline and AI orchestration.",
         stack: [
             { name: "Next.js", version: "14" },
             { name: "Gemini Flash", version: "1.x" },
@@ -114,23 +114,23 @@ const projects = [
         ],
         image: "/assets/work/researchai.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/InsightAgent"
     },
 
     {
         num: "05",
-        category: "AI/ML",
+        category: "ml",
         title: "BTC Predictor – LSTM-Based Crypto Forecasting",
         description:
             "Time-series deep learning model for short-term BTC trend prediction.",
         problem:
-            "Volatility in crypto markets makes manual trend estimation unreliable.",
+            "Manual crypto trend estimation is inconsistent.",
         solution:
-            "Implemented LSTM forecasting pipeline with structured preprocessing and evaluation splits.",
+            "Implemented LSTM forecasting pipeline with preprocessing and validation splits.",
         impact:
-            "Created reproducible experimentation framework for trend modeling.",
+            "Created reproducible experimentation framework.",
         role:
-            "Built preprocessing, model training, and evaluation dashboard.",
+            "Built model training and evaluation pipeline.",
         stack: [
             { name: "Python", version: "3.11" },
             { name: "TensorFlow", version: "2.x" }
@@ -145,45 +145,45 @@ const projects = [
         category: "research",
         title: "Decision Intelligence Framework for Customer Churn",
         description:
-            "A research-oriented framework extending predictive churn modeling into adaptive policy learning.",
+            "Extended predictive churn modeling into adaptive policy learning.",
         problem:
-            "Traditional churn models only predict risk but do not optimize intervention strategies.",
+            "Prediction alone does not optimize intervention strategies.",
         solution:
-            "Integrated predictive modeling with decision policy optimization for adaptive retention strategies.",
+            "Integrated predictive modeling with decision policy optimization.",
         impact:
-            "Shifted churn modeling from passive prediction to actionable decision intelligence.",
+            "Shifted churn modeling toward actionable decision systems.",
         role:
-            "Designed modeling framework and evaluation methodology.",
+            "Designed framework and evaluation methodology.",
         stack: [
             { name: "Python", version: "3.x" },
             { name: "Scikit-learn", version: "1.x" }
         ],
         image: "/assets/work/churn.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/Customer-Churn-Decision-System"
     },
 
     {
         num: "07",
-        category: "AI/ML",
+        category: "ai",
         title: "Regular Expression Inference using Reinforcement Learning",
         description:
-            "An RL-based system that learns regular expressions from labeled string examples and constructs corresponding automata.",
+            "RL-based system that learns regular expressions and constructs corresponding automata.",
         problem:
-            "Manual regex construction for complex patterns is error-prone and non-scalable.",
+            "Manual regex design is error-prone and difficult to scale.",
         solution:
-            "Modeled regex generation as a reinforcement learning search problem with automata validation.",
+            "Modeled regex generation as an RL search problem with automata validation.",
         impact:
-            "Bridged ML with formal language theory and automated pattern synthesis.",
+            "Bridged ML with formal language theory.",
         role:
-            "Designed RL environment and implemented automata visualization modules.",
+            "Designed RL environment and automata visualization.",
         stack: [
             { name: "Python", version: "3.x" },
             { name: "PyTorch", version: "2.x" }
         ],
         image: "/assets/work/regex.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/automata-with-ml"
     },
 
     {
@@ -191,15 +191,15 @@ const projects = [
         category: "research",
         title: "Quantum Multi-Attention Network for Time-Series Forecasting",
         description:
-            "A hybrid quantum-classical neural network architecture exploring quantum attention mechanisms for long-horizon forecasting.",
+            "Hybrid quantum-classical neural architecture for long-horizon forecasting.",
         problem:
-            "Classical models struggle with capturing long-term dependencies efficiently.",
+            "Classical models struggle with long-term dependency capture.",
         solution:
-            "Proposed integration of quantum attention layers within deep sequential models.",
+            "Proposed integration of quantum attention layers in sequential models.",
         impact:
-            "Explored frontier intersection of quantum ML and time-series prediction.",
+            "Explored intersection of quantum ML and forecasting.",
         role:
-            "Conceptualized architecture and comparative evaluation design.",
+            "Conceptualized architecture and evaluation framework.",
         stack: [
             { name: "Python", version: "3.x" },
             { name: "Qiskit", version: "0.x" }
@@ -209,20 +209,24 @@ const projects = [
         codeUrl: ""
     },
 
+    // =========================
+    // OPTIMIZATION / SYSTEMS
+    // =========================
+
     {
         num: "09",
-        category: "research",
+        category: "optimization",
         title: "Task Scheduler Benchmark using Metaheuristics",
         description:
-            "Comparative benchmark of swarm-based algorithms for constrained task allocation.",
+            "Comparative evaluation of swarm-based algorithms for constrained task allocation.",
         problem:
-            "Static schedulers fail under constrained combinatorial workloads.",
+            "Static schedulers fail under combinatorial constraints.",
         solution:
             "Implemented BFPA, MPA, FFMPA, and BGWO for 0/1 knapsack-style optimization.",
         impact:
-            "Provided comparative evaluation of bio-inspired algorithms for scheduling.",
+            "Benchmarked bio-inspired scheduling approaches.",
         role:
-            "Implemented algorithms and performance evaluation framework.",
+            "Implemented and evaluated algorithms.",
         stack: [
             { name: "Python", version: "3.x" }
         ],
@@ -231,24 +235,20 @@ const projects = [
         codeUrl: ""
     },
 
-    // =========================
-    // SYSTEMS / COMPILERS
-    // =========================
-
     {
         num: "10",
         category: "systems",
         title: "SIMPL – Custom Programming Language & Compiler",
         description:
-            "A statically-typed experimental programming language with a full compiler pipeline.",
+            "Statically-typed experimental language with full compiler pipeline.",
         problem:
-            "Understanding compiler internals requires practical implementation beyond theory.",
+            "Compiler theory requires hands-on implementation for mastery.",
         solution:
-            "Built lexer, parser (AST generation), semantic analyzer, and intermediate representation generator.",
+            "Built lexer, parser (AST), semantic analyzer, and intermediate representation generator.",
         impact:
-            "Demonstrated end-to-end compiler construction and parsing theory mastery.",
+            "Demonstrated end-to-end compiler construction expertise.",
         role:
-            "Designed language grammar and implemented compilation stages.",
+            "Designed grammar and implemented compilation stages.",
         stack: [
             { name: "C++", version: "20" },
             { name: "Flex", version: "2.x" },
@@ -256,7 +256,7 @@ const projects = [
         ],
         image: "/assets/work/simpl.png",
         liveUrl: "",
-        codeUrl: ""
+        codeUrl: "https://github.com/Praneeth-2602/SIMPL-Simple-Imperative-Modular-Programming-Language"
     },
 
     {
@@ -264,13 +264,13 @@ const projects = [
         category: "systems",
         title: "Aquila – Self-Optimizing Task Scheduler",
         description:
-            "A performance-aware adaptive scheduler designed for integration into a custom OS architecture.",
+            "Adaptive scheduler designed for integration into a custom OS architecture.",
         problem:
-            "Static scheduling policies cannot adapt to runtime workload shifts.",
+            "Static scheduling policies cannot adapt to runtime workload changes.",
         solution:
-            "Designed adaptive scheduling core with optimization logic for dynamic task allocation.",
+            "Designed adaptive scheduling core with optimization logic.",
         impact:
-            "Established foundation for a modular self-optimizing OS component.",
+            "Foundation for modular self-optimizing OS component.",
         role:
             "Implemented scheduling engine and modular architecture.",
         stack: [
@@ -279,8 +279,57 @@ const projects = [
         image: "/assets/work/aquila.png",
         liveUrl: "",
         codeUrl: ""
-    }
+    },
 
+    // =========================
+    // ADDITIONAL GITHUB PROJECTS
+    // =========================
+
+    {
+        num: "12",
+        category: "fullstack",
+        title: "Movie Website",
+        description:
+            "Responsive movie browsing platform with dynamic routing and API integration.",
+        problem:
+            "Users require an interactive interface to explore movie content.",
+        solution:
+            "Built a dynamic frontend integrated with backend services.",
+        impact:
+            "Delivered an engaging movie discovery experience.",
+        role:
+            "Developed frontend and server logic.",
+        stack: [
+            { name: "JavaScript", version: "ES6+" },
+            { name: "Node.js", version: "20" }
+        ],
+        image: "/assets/work/movie.png",
+        liveUrl: "https://movie-website-orcin.vercel.app",
+        codeUrl: "https://github.com/Praneeth-2602/Movie-Website"
+    },
+
+    {
+        num: "13",
+        category: "ml",
+        title: "Fraud Detection ML Model",
+        description:
+            "Machine learning model for detecting fraudulent patterns in structured datasets.",
+        problem:
+            "Fraud detection requires identifying subtle anomalies in data.",
+        solution:
+            "Trained supervised learning models with feature engineering.",
+        impact:
+            "Built baseline automated fraud classification system.",
+        role:
+            "Data preprocessing and model experimentation.",
+        stack: [
+            { name: "Python", version: "3.x" },
+            { name: "Scikit-learn", version: "1.x" }
+        ],
+        image: "/assets/work/fraud.png",
+        liveUrl: "",
+        codeUrl: "https://github.com/Praneeth-2602/Fraud-Detection-ML"
+    }
 ];
 
 
@@ -324,8 +373,8 @@ function Work() {
                             key={idx}
                             onClick={() => setSelectedCategory(cat)}
                             className={`px-4 py-2 rounded-full border transition-all duration-300 ${selectedCategory === cat
-                                    ? "bg-accent text-white"
-                                    : "border-gray-600 text-gray-400 hover:border-accent hover:text-accent"
+                                ? "bg-accent text-white"
+                                : "border-gray-600 text-gray-400 hover:border-accent hover:text-accent"
                                 }`}
                         >
                             {cat.charAt(0).toUpperCase() + cat.slice(1)}
