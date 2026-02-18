@@ -38,6 +38,7 @@ const Button = React.forwardRef(({ className, variant, size, asChild = false, ..
         borderRadius: "999px" 
         }}
       whileTap={{ scale: 0.95 }}
+      data-cursor-button
       className={cn(buttonVariants({ variant, size, className }))}
       ref={ref}
       {...props}

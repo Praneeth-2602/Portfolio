@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Magnetic from "./Magnetic";
 
 import { FaGithub as FaGitHub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 
@@ -25,9 +26,11 @@ function Socials({containerStyles, iconStyles}) {
     return (
         <div className={containerStyles}>
             {socials.map((social, index) => (
-                <Link key={index} href={social.path} className={iconStyles}>
-                    {social.icon}
-                </Link>
+                <Magnetic key={index} strength={16}>
+                    <Link href={social.path} className={iconStyles}>
+                        {social.icon}
+                    </Link>
+                </Magnetic>
             ))}
         </div>
     )
